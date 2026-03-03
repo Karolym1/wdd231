@@ -1,9 +1,43 @@
+/* Base styles */
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   background-color: #f4f4f4;
+  margin: 0;
   padding: 2rem;
+  line-height: 1.6;
 }
 
 h1 {
   color: #1f3c88;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+main {
+  margin-top: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+img {
+  max-width: 200px;
+  height: auto;
 }
