@@ -3,17 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WDD231 Home</title>
 
-    <!-- Normalize must load first -->
+    <title>WDD 231: Web Frontend Development I | Karolina Lym</title>
+
+    <meta
+      name="description"
+      content="Course home page for WDD 231 assignments and projects by Karolina Lym."
+    />
+    <meta name="author" content="Karolina Lym" />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css" />
-
-    <!-- Your custom styles load after -->
     <link rel="stylesheet" href="styles/base.css" />
+
+    <!-- JavaScript -->
+    <script src="scripts/getdates.js" defer></script>
   </head>
 
   <body>
-    <h1>WDD231 Home</h1>
-    <p>Hosting is working.</p>
+    <header>
+      <h1>WDD 231: Web Frontend Development I</h1>
+      <p>Karolina Lym</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Chamber Project</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Course Work</h2>
+        <ul>
+          <li>Week 01</li>
+          <li>Week 02</li>
+          <li>Week 03</li>
+          <li>Week 04</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>About Me</h2>
+
+        <img src="images/profile.jpg" alt="Photo of Karolina Lym" width="200" />
+
+        <p>
+          My name is Karolina Lym. I am a photographer, entrepreneur, and
+          student learning web development. I enjoy building digital products,
+          creating content, and helping businesses grow through visual media and
+          online platforms.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social">
+        <a href="https://github.com/Karolym1" target="_blank" rel="noopener"
+          >GitHub</a
+        >
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener"
+          >LinkedIn</a
+        >
+      </div>
+
+      <p>
+        &copy; <span id="currentyear"></span> | Karolina Lym | United States
+      </p>
+      <p id="lastModified"></p>
+    </footer>
   </body>
 </html>
