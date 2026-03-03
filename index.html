@@ -26,6 +26,7 @@
 
     <!-- JavaScript -->
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/course.js" defer></script>
   </head>
 
   <body>
@@ -43,14 +44,18 @@
     </nav>
 
     <main>
-      <section>
+      <section class="coursework">
         <h2>Course Work</h2>
-        <ul>
-          <li>Week 01</li>
-          <li>Week 02</li>
-          <li>Week 03</li>
-          <li>Week 04</li>
-        </ul>
+
+        <div class="filters">
+          <button type="button" id="all">All</button>
+          <button type="button" id="wdd">WDD</button>
+          <button type="button" id="cse">CSE</button>
+        </div>
+
+        <p class="credits">Total Credits: <span id="creditTotal">0</span></p>
+
+        <div id="courseCards" class="course-cards"></div>
       </section>
 
       <section>
@@ -70,15 +75,22 @@
         <h2>Web Development Resources</h2>
         <ul>
           <li>
-            <a href="https://developer.mozilla.org/" target="_blank"
+            <a
+              href="https://developer.mozilla.org/"
+              target="_blank"
+              rel="noopener"
               >MDN Web Docs</a
             >
           </li>
           <li>
-            <a href="https://css-tricks.com/" target="_blank">CSS Tricks</a>
+            <a href="https://css-tricks.com/" target="_blank" rel="noopener"
+              >CSS Tricks</a
+            >
           </li>
           <li>
-            <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+            <a href="https://www.w3schools.com/" target="_blank" rel="noopener"
+              >W3Schools</a
+            >
           </li>
         </ul>
       </section>

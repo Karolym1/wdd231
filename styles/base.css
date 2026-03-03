@@ -1,11 +1,9 @@
 /* Base styles */
 
 body {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   background-color: #f4f4f4;
   margin: 0;
-  padding: 2rem;
-  line-height: 1.6;
 }
 
 h1 {
@@ -40,4 +38,27 @@ section {
 img {
   max-width: 200px;
   height: auto;
+}
+.course-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.course-card.completed {
+  background-color: #e6f4ea;
+  border-left: 6px solid #2e7d32;
+  font-weight: bold;
+}
+.course-cards {
+  display: grid;
+  gap: 1rem;
+}
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
 }
