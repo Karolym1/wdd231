@@ -28,7 +28,10 @@ nav a {
 }
 
 main {
-  margin-top: 1rem;
+  max-width: 900px;
+  margin: 1rem auto 0;
+  padding: 2rem;
+  background-color: #ffffff;
 }
 
 section {
@@ -39,10 +42,15 @@ img {
   max-width: 200px;
   height: auto;
 }
+
+.course-cards {
+  display: grid;
+  gap: 1rem;
+}
+
 .course-card {
   border: 1px solid #ccc;
   padding: 1rem;
-  margin-bottom: 1rem;
   border-radius: 6px;
   background: #ffffff;
 }
@@ -51,14 +59,4 @@ img {
   background-color: #e6f4ea;
   border-left: 6px solid #2e7d32;
   font-weight: bold;
-}
-.course-cards {
-  display: grid;
-  gap: 1rem;
-}
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: #ffffff;
 }
