@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salt Lake City Chamber Directory</title>
+    <meta
+      name="description"
+      content="Salt Lake City Chamber of Commerce business directory page"
+    />
+    <meta name="author" content="Karolina Lym" />
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/directory.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Salt Lake City Chamber of Commerce</h1>
+    </header>
+
+    <main>
+      <h2>Business Directory</h2>
+
+      <div class="menu">
+        <button id="grid">Grid View</button>
+        <button id="list">List View</button>
+      </div>
+
+      <div id="members" class="grid"></div>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Salt Lake City Chamber of Commerce</p>
+      <p>Karolina Lym | WDD231</p>
+      <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/directory.js"></script>
+  </body>
+</html>
