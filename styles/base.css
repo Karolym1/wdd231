@@ -60,3 +60,14 @@ img {
   border-left: 6px solid #2e7d32;
   font-weight: bold;
 }
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.view-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}

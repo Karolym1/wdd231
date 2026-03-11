@@ -11,11 +11,10 @@
       name="description"
       content="Browse Salt Lake City Chamber member businesses and explore companies in the local business directory."
     />
+    <meta name="author" content="Karolina Lym" />
 
-    <!-- Favicon -->
     <link rel="icon" href="images/profile.jpg" />
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -24,16 +23,12 @@
       rel="stylesheet"
     />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/larger.css" />
+    <link rel="stylesheet" href="styles/directory.css" />
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Salt Lake City Chamber Directory" />
     <meta
       property="og:description"
-      content="Explore Salt Lake City Chamber businesses and discover local companies in the community."
+      content="Browse Salt Lake City Chamber member businesses and explore companies in the local business directory."
     />
     <meta
       property="og:image"
@@ -45,19 +40,17 @@
     />
     <meta property="og:type" content="website" />
 
-    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Salt Lake City Chamber Directory" />
     <meta
       name="twitter:description"
-      content="Explore Salt Lake City Chamber businesses and discover local companies in the community."
+      content="Browse Salt Lake City Chamber member businesses and explore companies in the local business directory."
     />
     <meta
       name="twitter:image"
       content="https://karolym1.github.io/wdd231/chamber/images/profile.jpg"
     />
 
-    <!-- JavaScript -->
     <script src="scripts/directory.js" defer></script>
   </head>
 
@@ -66,7 +59,7 @@
       <h1>Salt Lake City Chamber of Commerce</h1>
 
       <nav>
-        <button id="menuButton">☰</button>
+        <button id="menuButton" aria-label="Open navigation menu">☰</button>
 
         <ul id="menuItems">
           <li><a href="../index.html">Home</a></li>
@@ -85,13 +78,11 @@
         <button id="list">List View</button>
       </div>
 
-      <section id="directory" class="grid">
-        <!-- Business cards will load here from directory.js -->
-      </section>
+      <section id="directory" class="grid"></section>
     </main>
 
     <footer>
-      <p>© <span id="year"></span> Salt Lake City Chamber</p>
+      <p>&copy; <span id="year"></span> Salt Lake City Chamber</p>
       <p id="lastModified"></p>
     </footer>
   </body>
