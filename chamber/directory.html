@@ -13,7 +13,6 @@
 
     <link rel="icon" href="../favicon.ico" />
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Salt Lake City Chamber Directory" />
     <meta
       property="og:description"
@@ -21,7 +20,7 @@
     />
     <meta
       property="og:image"
-      content="https://karolym1.github.io/wdd231/chamber/images/logo.png"
+      content="https://karolym1.github.io/wdd231/chamber/images/logo.webp"
     />
     <meta
       property="og:url"
@@ -29,7 +28,6 @@
     />
     <meta property="og:type" content="website" />
 
-    <!-- Google Fonts FIX for audit -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,10 +35,11 @@
       rel="stylesheet"
     />
 
-    <!-- CSS -->
     <link rel="stylesheet" href="../styles/normalize.css" />
     <link rel="stylesheet" href="styles/small.css" />
     <link rel="stylesheet" href="styles/larger.css" />
+
+    <script src="scripts/directory.js" defer></script>
   </head>
 
   <body>
@@ -48,19 +47,22 @@
       <div class="top-bar">
         <div class="brand">
           <img
-            src="images/logo.png"
+            src="images/logo.webp"
             alt="Salt Lake City Chamber Logo"
             width="80"
             height="80"
           />
-
           <div>
             <span class="site-name">Salt Lake City</span>
             <span class="site-tagline">Chamber of Commerce</span>
           </div>
         </div>
 
-        <button id="menu-button" aria-label="Open navigation menu"></button>
+        <button
+          id="menu-button"
+          type="button"
+          aria-label="Open navigation menu"
+        ></button>
       </div>
 
       <nav id="site-nav">
@@ -77,8 +79,8 @@
       <h1>Business Directory</h1>
 
       <div class="view-controls">
-        <button id="grid-view">Grid View</button>
-        <button id="list-view">List View</button>
+        <button id="grid-view" type="button">Grid View</button>
+        <button id="list-view" type="button">List View</button>
       </div>
 
       <section id="members"></section>
@@ -105,7 +107,5 @@
         </section>
       </div>
     </footer>
-
-    <script src="scripts/directory.js" defer></script>
   </body>
 </html>
