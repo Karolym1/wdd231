@@ -1,0 +1,54 @@
+@media only screen and (min-width: 38rem) {
+  /* Hide hamburger menu on larger screens */
+  #menu-button {
+    display: none;
+  }
+
+  /* Always show navigation */
+  #site-nav {
+    display: block;
+  }
+
+  /* Navigation layout */
+  .navigation {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navigation li {
+    flex: 1 1 auto;
+  }
+
+  .navigation a {
+    text-align: center;
+  }
+
+  /* GRID VIEW (desktop layout) */
+  #members.grid-view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  /* LIST VIEW */
+  #members.list-view {
+    display: block;
+  }
+
+  #members.list-view .member-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #members.list-view img {
+    max-width: 120px;
+  }
+
+  /* Footer layout */
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
