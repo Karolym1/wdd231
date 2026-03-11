@@ -38,8 +38,10 @@ header {
   color: white;
 }
 
-.navigation a:hover {
+.navigation a:hover,
+.navigation a.active {
   background: #d9a404;
+  color: black;
 }
 
 main {
@@ -50,10 +52,23 @@ main {
   margin-bottom: 1rem;
 }
 
-#members {
+#members.grid-view {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+}
+
+#members.list-view {
+  display: block;
+}
+
+#members.list-view .member-card {
+  display: block;
+  text-align: left;
+}
+
+#members.list-view img {
+  display: none;
 }
 
 .member-card {
@@ -64,33 +79,11 @@ main {
 
 .member-card img {
   max-width: 200px;
+  height: auto;
 }
 
 footer {
   background: #1f3c88;
   color: white;
   padding: 1rem;
-}
-/* GRID VIEW */
-
-#members.grid-view {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-/* LIST VIEW */
-
-#members.list-view {
-  display: block;
-}
-
-#members.list-view .member-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-#members.list-view img {
-  max-width: 120px;
 }
