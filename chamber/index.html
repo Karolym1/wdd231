@@ -8,9 +8,25 @@
 
     <meta
       name="description"
-      content="Official homepage of the Salt Lake City Chamber of Commerce."
+      content="Official homepage of the Salt Lake City Chamber of Commerce. Connect with local businesses, events, and opportunities."
     />
     <meta name="author" content="Karolina Lym" />
+
+    <meta property="og:title" content="Salt Lake City Chamber of Commerce" />
+    <meta
+      property="og:description"
+      content="Connect with local businesses, events, and opportunities in Salt Lake City."
+    />
+    <meta
+      property="og:image"
+      content="https://karolym1.github.io/wdd231/chamber/images/hero.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://karolym1.github.io/wdd231/chamber/"
+    />
+
+    <link rel="icon" href="./images/logo.webp" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -45,7 +61,7 @@
           id="menu-button"
           class="menu-button"
           aria-label="Open navigation menu"
-          onclick="toggleMenu()"
+          aria-expanded="false"
         >
           ☰
         </button>
@@ -108,12 +124,5 @@
         <p id="lastModified"></p>
       </section>
     </footer>
-
-    <script>
-      function toggleMenu() {
-        const nav = document.getElementById("site-nav");
-        nav.classList.toggle("open");
-      }
-    </script>
   </body>
 </html>

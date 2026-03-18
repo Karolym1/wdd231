@@ -2,12 +2,24 @@ const membersURL = "./data/members.json";
 const weatherURL =
   "https://api.open-meteo.com/v1/forecast?latitude=40.7608&longitude=-111.8910&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&forecast_days=4&timezone=auto";
 
+const menuButton = document.querySelector("#menu-button");
+const navigation = document.querySelector("#site-nav");
 const currentTemp = document.querySelector("#current-temp");
 const weatherDesc = document.querySelector("#weather-desc");
 const forecastContainer = document.querySelector("#forecast");
 const spotlightsContainer = document.querySelector("#spotlights");
 const yearSpan = document.querySelector("#currentyear");
 const lastModified = document.querySelector("#lastModified");
+
+if (menuButton && navigation) {
+  menuButton.addEventListener("click", () => {
+    navigation.classList.toggle("open");
+
+    const isOpen = navigation.classList.contains("open");
+    menuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    menuButton.textContent = isOpen ? "✖" : "☰";
+  });
+}
 
 function getWeatherDescription(code) {
   const codes = {
@@ -57,29 +69,45 @@ async function getWeather() {
     const temp = Math.round(data.current.temperature_2m);
     const code = data.current.weather_code;
 
-    currentTemp.textContent = `Current Temperature: ${temp}°F`;
-    weatherDesc.textContent = getWeatherDescription(code);
+    if (currentTemp) {
+      currentTemp.textContent = `Current Temperature: ${temp}°F`;
+    }
 
-    forecastContainer.innerHTML = "";
+    if (weatherDesc) {
+      weatherDesc.textContent = getWeatherDescription(code);
+    }
 
-    for (let i = 1; i <= 3; i++) {
-      const day = document.createElement("p");
-      const date = new Date(data.daily.time[i]);
+    if (forecastContainer) {
+      forecastContainer.innerHTML = "";
 
-      const max = Math.round(data.daily.temperature_2m_max[i]);
-      const min = Math.round(data.daily.temperature_2m_min[i]);
+      for (let i = 1; i <= 3; i++) {
+        const day = document.createElement("p");
+        const date = new Date(data.daily.time[i]);
 
-      day.textContent = `${date.toLocaleDateString("en-US", {
-        weekday: "short",
-      })}: High ${max}°F / Low ${min}°F`;
+        const max = Math.round(data.daily.temperature_2m_max[i]);
+        const min = Math.round(data.daily.temperature_2m_min[i]);
 
-      forecastContainer.appendChild(day);
+        day.textContent = `${date.toLocaleDateString("en-US", {
+          weekday: "short",
+        })}: High ${max}°F / Low ${min}°F`;
+
+        forecastContainer.appendChild(day);
+      }
     }
   } catch (error) {
     console.error("Weather error:", error);
-    currentTemp.textContent = "Weather data unavailable.";
-    weatherDesc.textContent = "";
-    forecastContainer.innerHTML = "";
+
+    if (currentTemp) {
+      currentTemp.textContent = "Weather data unavailable.";
+    }
+
+    if (weatherDesc) {
+      weatherDesc.textContent = "";
+    }
+
+    if (forecastContainer) {
+      forecastContainer.innerHTML = "";
+    }
   }
 }
 
@@ -89,6 +117,8 @@ function getRandomMembers(members, count) {
 }
 
 function displaySpotlights(members) {
+  if (!spotlightsContainer) return;
+
   spotlightsContainer.innerHTML = "";
 
   members.forEach((member) => {
@@ -161,7 +191,11 @@ async function getSpotlights() {
     displaySpotlights(selectedMembers);
   } catch (error) {
     console.error("Spotlight error:", error);
-    spotlightsContainer.innerHTML = "<p>Spotlights unavailable right now.</p>";
+
+    if (spotlightsContainer) {
+      spotlightsContainer.innerHTML =
+        "<p>Spotlights unavailable right now.</p>";
+    }
   }
 }
 
