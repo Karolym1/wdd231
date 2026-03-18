@@ -112,6 +112,8 @@ h2 {
 
 .hero img {
   width: 100%;
+  height: 300px; /* smaller */
+  object-fit: cover;
   display: block;
 }
 
