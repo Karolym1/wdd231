@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>WDD 231: Web Frontend Development I | Karolina Lym</title>
+    <title>Salt Lake City Chamber of Commerce</title>
 
     <meta
       name="description"
-      content="Course home page for WDD 231 assignments and projects by Karolina Lym."
+      content="Official homepage of the Salt Lake City Chamber of Commerce. Connect with local businesses, events, and opportunities."
     />
     <meta name="author" content="Karolina Lym" />
 
-    <!-- Google Fonts (Required) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,95 +21,88 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
 
-    <!-- JavaScript -->
-    <script src="scripts/getdates.js" defer></script>
-    <script src="scripts/course.js" defer></script>
+    <!-- JS -->
+    <script src="scripts/index.js" defer></script>
   </head>
 
   <body>
+    <!-- HEADER -->
     <header>
-      <h1>WDD 231: Web Frontend Development I</h1>
-      <p>Karolina Lym</p>
+      <div class="logo">
+        <img src="images/logo.webp" alt="Salt Lake City Chamber Logo" />
+        <div>
+          <h1>Salt Lake City</h1>
+          <p>Chamber of Commerce</p>
+        </div>
+      </div>
+
+      <button id="menu-button" aria-label="Menu">☰</button>
     </header>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Chamber Project</a></li>
-        <li><a href="#">Final Project</a></li>
+    <!-- NAVIGATION -->
+    <nav id="site-nav">
+      <ul class="navigation">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="#">Join</a></li>
+        <li><a href="#">Discover</a></li>
       </ul>
     </nav>
 
+    <!-- MAIN -->
     <main>
-      <section class="coursework">
-        <h2>Course Work</h2>
+      <!-- HERO -->
+      <section class="hero">
+        <img
+          src="images/hero.jpg"
+          alt="Salt Lake City skyline and business district"
+        />
+        <a href="#" class="cta-button">Join the Chamber</a>
+      </section>
 
-        <div class="filters">
-          <button type="button" id="all">All</button>
-          <button type="button" id="wdd">WDD</button>
-          <button type="button" id="cse">CSE</button>
+      <h2 class="welcome">Welcome to the Chamber</h2>
+
+      <!-- EVENTS + WEATHER -->
+      <section class="home-grid">
+        <div class="card">
+          <h3>Events</h3>
+          <ul>
+            <li>Business Networking – March 22</li>
+            <li>Leadership Workshop – March 25</li>
+            <li>Community Expo – March 28</li>
+          </ul>
         </div>
 
-        <p class="credits">Total Credits: <span id="creditTotal">0</span></p>
-
-        <div id="courseCards" class="course-cards"></div>
+        <div class="card" id="weather">
+          <h3>Weather</h3>
+          <p>Loading weather...</p>
+        </div>
       </section>
 
+      <!-- SPOTLIGHTS -->
       <section>
-        <h2>About Me</h2>
-
-        <img src="images/profile.jpg" alt="Photo of Karolina Lym" width="200" />
-
-        <p>
-          My name is Karolina Lym. I am a photographer, entrepreneur, and
-          student learning web development. I enjoy building digital products,
-          creating content, and helping businesses grow through visual media and
-          online platforms.
-        </p>
-      </section>
-
-      <section>
-        <h2>Web Development Resources</h2>
-        <ul>
-          <li>
-            <a
-              href="https://developer.mozilla.org/"
-              target="_blank"
-              rel="noopener"
-              >MDN Web Docs</a
-            >
-          </li>
-          <li>
-            <a href="https://css-tricks.com/" target="_blank" rel="noopener"
-              >CSS Tricks</a
-            >
-          </li>
-          <li>
-            <a href="https://www.w3schools.com/" target="_blank" rel="noopener"
-              >W3Schools</a
-            >
-          </li>
-        </ul>
+        <h2 class="spotlight-title">Member Spotlights</h2>
+        <div id="spotlights" class="spotlight-grid"></div>
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
-      <div class="social">
-        <a href="https://github.com/Karolym1" target="_blank" rel="noopener"
-          >GitHub</a
-        >
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener"
-          >LinkedIn</a
-        >
-      </div>
+      <section>
+        <h3>Salt Lake City Chamber of Commerce</h3>
+        <p>151 S State Street</p>
+        <p>Salt Lake City, UT 84111</p>
+        <p>(801) 555-2310</p>
+        <p>info@slcchamber.org</p>
+      </section>
 
-      <p>
-        &copy; <span id="currentyear"></span> | Karolina Lym | United States
-      </p>
-      <p id="lastModified"></p>
+      <section>
+        <p>&copy; <span id="currentyear"></span> | Karolina Lym | WDD 231</p>
+        <p id="lastModified"></p>
+      </section>
     </footer>
   </body>
 </html>

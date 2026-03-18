@@ -8,22 +8,10 @@
 
     <meta
       name="description"
-      content="Salt Lake City Chamber home page with events, weather, and business spotlights."
+      content="Official homepage of the Salt Lake City Chamber of Commerce."
     />
     <meta name="author" content="Karolina Lym" />
 
-    <meta property="og:title" content="Salt Lake City Chamber of Commerce" />
-    <meta
-      property="og:description"
-      content="Discover events, weather, and local businesses in Salt Lake City."
-    />
-    <meta property="og:image" content="images/logo.webp" />
-    <meta
-      property="og:url"
-      content="https://karolym1.github.io/wdd231/chamber/index.html"
-    />
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,21 +19,18 @@
       rel="stylesheet"
     />
 
-    <!-- CSS -->
     <link rel="stylesheet" href="./styles/directory.css" />
     <link rel="stylesheet" href="./styles/small.css" />
     <link rel="stylesheet" href="./styles/larger.css" />
 
-    <!-- JS -->
     <script src="./scripts/index.js" defer></script>
   </head>
-
   <body>
     <header>
       <div class="top-bar">
         <div class="branding">
           <img
-            src="images/logo.webp"
+            src="./images/logo.webp"
             alt="Salt Lake City Chamber logo"
             width="80"
             height="80"
@@ -56,7 +41,14 @@
           </div>
         </div>
 
-        <button id="menu-button" onclick="toggleMenu()">☰</button>
+        <button
+          id="menu-button"
+          class="menu-button"
+          aria-label="Open navigation menu"
+          onclick="toggleMenu()"
+        >
+          ☰
+        </button>
       </div>
 
       <nav id="site-nav" class="navigation">
@@ -68,15 +60,16 @@
     </header>
 
     <main>
-      <!-- HERO -->
       <section class="hero">
-        <img src="images/profile.jpg" alt="Salt Lake City business community" />
+        <img
+          src="./images/hero.jpg"
+          alt="Salt Lake City skyline and business district"
+        />
         <a href="join.html" class="cta-button">Join the Chamber</a>
       </section>
 
       <h1>Welcome to the Chamber</h1>
 
-      <!-- EVENTS + WEATHER -->
       <section class="home-grid">
         <div class="card">
           <h2>Events</h2>
@@ -95,7 +88,6 @@
         </div>
       </section>
 
-      <!-- SPOTLIGHTS -->
       <section>
         <h2>Member Spotlights</h2>
         <div id="spotlights" class="grid"></div>
@@ -103,8 +95,18 @@
     </main>
 
     <footer>
-      <p>&copy; <span id="currentyear"></span> | Karolina Lym | WDD 231</p>
-      <p id="lastModified"></p>
+      <section>
+        <h3>Salt Lake City Chamber of Commerce</h3>
+        <p>151 S State Street</p>
+        <p>Salt Lake City, UT 84111</p>
+        <p>(801) 555-2310</p>
+        <p>info@slcchamber.org</p>
+      </section>
+
+      <section>
+        <p>&copy; <span id="currentyear"></span> | Karolina Lym | WDD 231</p>
+        <p id="lastModified"></p>
+      </section>
     </footer>
 
     <script>
