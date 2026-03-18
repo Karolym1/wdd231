@@ -6,7 +6,7 @@
 
   /* Always show navigation */
   #site-nav {
-    display: block;
+    display: flex;
   }
 
   /* Navigation layout */
@@ -15,40 +15,62 @@
     justify-content: center;
   }
 
-  .navigation li {
-    flex: 1 1 auto;
-  }
-
   .navigation a {
+    flex: 1 1 auto;
     text-align: center;
   }
 
-  /* GRID VIEW (desktop layout) */
-  #members.grid-view {
+  /* Directory grid view */
+  #members.grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
 
-  /* LIST VIEW */
-  #members.list-view {
+  /* Directory list view */
+  #members.list {
     display: block;
   }
 
-  #members.list-view .member-card {
+  #members.list .member-card {
     display: flex;
     align-items: center;
     gap: 1rem;
   }
 
-  #members.list-view img {
+  #members.list img {
     max-width: 120px;
   }
 
   /* Footer layout */
-  .footer-content {
+  footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+  }
+
+  /* Hero */
+  .hero img {
+    max-height: 500px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  /* Home grid */
+  .home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  /* Spotlights */
+  #spotlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
   }
 }

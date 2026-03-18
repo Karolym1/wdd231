@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Salt Lake City Chamber of Commerce</title>
+
+    <meta
+      name="description"
+      content="Salt Lake City Chamber home page with events, weather, and business spotlights."
+    />
+    <meta name="author" content="Karolina Lym" />
+
+    <meta property="og:title" content="Salt Lake City Chamber of Commerce" />
+    <meta
+      property="og:description"
+      content="Discover events, weather, and local businesses in Salt Lake City."
+    />
+    <meta property="og:image" content="images/logo.webp" />
+    <meta
+      property="og:url"
+      content="https://karolym1.github.io/wdd231/chamber/index.html"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/directory.css" />
+    <link rel="stylesheet" href="./styles/small.css" />
+    <link rel="stylesheet" href="./styles/larger.css" />
+
+    <!-- JS -->
+    <script src="./scripts/index.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="top-bar">
+        <div class="branding">
+          <img
+            src="images/logo.webp"
+            alt="Salt Lake City Chamber logo"
+            width="80"
+            height="80"
+          />
+          <div>
+            <span class="site-name">Salt Lake City</span>
+            <span class="site-subtitle">Chamber of Commerce</span>
+          </div>
+        </div>
+
+        <button id="menu-button" onclick="toggleMenu()">☰</button>
+      </div>
+
+      <nav id="site-nav" class="navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html">Join</a>
+        <a href="discover.html">Discover</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <img src="images/profile.jpg" alt="Salt Lake City business community" />
+        <a href="join.html" class="cta-button">Join the Chamber</a>
+      </section>
+
+      <h1>Welcome to the Chamber</h1>
+
+      <!-- EVENTS + WEATHER -->
+      <section class="home-grid">
+        <div class="card">
+          <h2>Events</h2>
+          <ul>
+            <li>Business Networking – March 22</li>
+            <li>Leadership Workshop – March 25</li>
+            <li>Community Expo – March 28</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Weather</h2>
+          <p id="current-temp">Loading...</p>
+          <p id="weather-desc"></p>
+          <div id="forecast"></div>
+        </div>
+      </section>
+
+      <!-- SPOTLIGHTS -->
+      <section>
+        <h2>Member Spotlights</h2>
+        <div id="spotlights" class="grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="currentyear"></span> | Karolina Lym | WDD 231</p>
+      <p id="lastModified"></p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const nav = document.getElementById("site-nav");
+        nav.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>
