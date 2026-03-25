@@ -8,18 +8,17 @@
 
     <meta
       name="description"
-      content="Apply to join the Salt Lake City Chamber and explore membership levels, business benefits, networking opportunities, and community growth."
+      content="Apply to join the Salt Lake City Chamber and explore membership levels, business benefits, networking opportunities, and community growth in Salt Lake City."
     />
     <meta name="author" content="Karolina Lym" />
 
-    <!-- Open Graph -->
     <meta
       property="og:title"
       content="Join the Salt Lake City Chamber of Commerce"
     />
     <meta
       property="og:description"
-      content="Apply to join the Salt Lake City Chamber and explore membership levels, business benefits, networking opportunities, and community growth."
+      content="Apply to join the Salt Lake City Chamber and explore membership levels, business benefits, networking opportunities, and community growth in Salt Lake City."
     />
     <meta
       property="og:image"
@@ -31,10 +30,8 @@
     />
     <meta property="og:type" content="website" />
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/logo.webp" />
+    <link rel="icon" href="images/logo.webp" type="image/webp" />
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -42,17 +39,14 @@
       rel="stylesheet"
     />
 
-    <!-- CSS -->
     <link rel="stylesheet" href="../styles/normalize.css" />
     <link rel="stylesheet" href="../styles/base.css" />
     <link rel="stylesheet" href="styles/small.css" />
     <link rel="stylesheet" href="styles/larger.css" />
     <link rel="stylesheet" href="styles/join.css" />
 
-    <!-- JS -->
     <script defer src="scripts/join.js"></script>
   </head>
-
   <body>
     <header>
       <div class="header-top">
@@ -73,7 +67,6 @@
     </header>
 
     <main class="join-main">
-      <!-- FORM -->
       <section class="form-section">
         <h2>Membership Application</h2>
 
@@ -83,6 +76,7 @@
             <input
               type="text"
               name="firstName"
+              title="Enter your first name"
               required
               autocomplete="given-name"
             />
@@ -93,6 +87,7 @@
             <input
               type="text"
               name="lastName"
+              title="Enter your last name"
               required
               autocomplete="family-name"
             />
@@ -103,8 +98,9 @@
             <input
               type="text"
               name="orgTitle"
+              title="Enter your organizational title"
               pattern="[A-Za-z\-\s]{7,}"
-              title="At least 7 characters. Letters, spaces, or hyphens only."
+              autocomplete="organization-title"
             />
           </label>
 
@@ -113,6 +109,7 @@
             <input
               type="email"
               name="email"
+              title="Enter your email address"
               placeholder="example@email.com"
               required
               autocomplete="email"
@@ -121,7 +118,13 @@
 
           <label>
             Mobile Phone
-            <input type="tel" name="phone" required autocomplete="tel" />
+            <input
+              type="tel"
+              name="phone"
+              title="Enter your mobile phone number"
+              required
+              autocomplete="tel"
+            />
           </label>
 
           <label>
@@ -129,6 +132,7 @@
             <input
               type="text"
               name="organization"
+              title="Enter your business or organization name"
               required
               autocomplete="organization"
             />
@@ -160,7 +164,11 @@
 
           <label>
             Business / Organization Description
-            <textarea name="description" rows="5"></textarea>
+            <textarea
+              name="description"
+              title="Describe your business or organization"
+              rows="5"
+            ></textarea>
           </label>
 
           <input type="hidden" id="timestamp" name="timestamp" />
@@ -169,7 +177,6 @@
         </form>
       </section>
 
-      <!-- CARDS -->
       <section class="cards-section">
         <h2>Membership Levels</h2>
 
@@ -202,7 +209,6 @@
         </div>
       </section>
 
-      <!-- MODALS -->
       <dialog id="np-modal">
         <h3>NP Membership Benefits</h3>
         <p>No fee, community exposure, and networking opportunities.</p>
