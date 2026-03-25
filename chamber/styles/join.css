@@ -1,0 +1,130 @@
+.join-main,
+.thankyou-main {
+  display: grid;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.form-section,
+.cards-section,
+.thankyou-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.form-section h2,
+.cards-section h2,
+.thankyou-card h2 {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+form label,
+fieldset {
+  display: grid;
+  gap: 0.4rem;
+}
+
+input,
+textarea,
+select {
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"],
+.membership-card button,
+.close-modal {
+  background-color: #1f4d7a;
+  color: white;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+.membership-card button:hover,
+.close-modal:hover {
+  background-color: #163956;
+}
+
+.membership-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.membership-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #f7f7f7;
+
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.membership-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.membership-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.membership-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.membership-card:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 400px;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.submitted-info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.thankyou-card {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .join-main {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
