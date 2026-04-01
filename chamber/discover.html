@@ -3,10 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Discover | Salt Lake City Chamber</title>
 
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/base.css" />
+    <title>Discover Salt Lake City | Chamber of Commerce</title>
+    <meta
+      name="description"
+      content="Discover Salt Lake City landmarks, parks, gardens, and attractions through the Chamber of Commerce discover page."
+    />
+    <meta name="author" content="Karolina Lym" />
+
+    <meta
+      property="og:title"
+      content="Discover Salt Lake City | Chamber of Commerce"
+    />
+    <meta
+      property="og:description"
+      content="Explore Salt Lake City attractions, parks, landmarks, and local highlights on the Chamber discover page."
+    />
+    <meta
+      property="og:image"
+      content="https://karolym1.github.io/wdd231/chamber/images/temple.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://karolym1.github.io/wdd231/chamber/discover.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="images/logo.webp" type="image/webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- IMPORTANT: base + normalize are in the ROOT styles folder -->
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/base.css" />
     <link rel="stylesheet" href="styles/discover.css" />
 
     <script type="module" src="scripts/discover.js"></script>
@@ -14,10 +48,26 @@
 
   <body>
     <header>
-      <h1>Discover Salt Lake City</h1>
+      <img
+        src="images/logo.webp"
+        alt="Salt Lake City Chamber logo"
+        width="100"
+        height="100"
+      />
+      <span>Salt Lake City Chamber</span>
+      <button id="menu-button" aria-label="Open navigation menu"></button>
+
+      <nav id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="discover.html" class="current">Discover</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html">Join</a>
+      </nav>
     </header>
 
     <main>
+      <h1>Discover Salt Lake City</h1>
+
       <section id="visit-message"></section>
       <section id="discover-cards"></section>
     </main>
