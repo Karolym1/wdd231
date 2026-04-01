@@ -1,0 +1,77 @@
+/* ===== PAGE ===== */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ===== VISIT MESSAGE ===== */
+#visit-message {
+  background-color: #f0f0f0;
+  border-left: 5px solid #333;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+/* ===== GRID ===== */
+#discover-cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+/* ===== CARD ===== */
+.discover-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background: white;
+}
+
+.discover-card img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ===== TABLET ===== */
+@media (min-width: 641px) {
+  #discover-cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+
+  .discover-card img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 1025px) {
+  #discover-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 card5 card6"
+      "card7 card8 card8";
+  }
+
+  .discover-card img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+}
