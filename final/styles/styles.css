@@ -1,0 +1,107 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #f5f5f5;
+  color: #000;
+}
+
+/* HEADER */
+.site-header {
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 60px;
+}
+
+.brand h1 {
+  color: #c9a227;
+  font-size: 1.5rem;
+}
+
+.brand p {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+/* NAV */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #c9a227;
+}
+
+/* MAIN */
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* SECTIONS */
+section {
+  background: #fff;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+}
+
+/* HERO */
+h2 {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* BUTTON */
+button,
+input[type="submit"] {
+  background: #c9a227;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* FORM */
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+input,
+select,
+textarea {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}

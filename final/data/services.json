@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Social Media Audit",
+    "category": "Strategy",
+    "price": "$75",
+    "description": "A review of your current social media presence with clear recommendations for improvement.",
+    "details": "Includes profile review, content consistency check, engagement review, and practical next steps."
+  },
+  {
+    "id": 2,
+    "title": "Content Planning Session",
+    "category": "Strategy",
+    "price": "$90",
+    "description": "A planning session focused on content direction and business goals.",
+    "details": "Includes monthly topic planning, content direction, and a simplified strategy for consistent posting."
+  },
+  {
+    "id": 3,
+    "title": "30-Day Content Calendar",
+    "category": "Content",
+    "price": "$120",
+    "description": "A full month of organized post ideas for your brand.",
+    "details": "Includes post ideas, content themes, and a practical monthly structure for publishing."
+  },
+  {
+    "id": 4,
+    "title": "Instagram Caption Writing",
+    "category": "Content",
+    "price": "$40",
+    "description": "Custom caption writing for branded social media posts.",
+    "details": "Includes clear caption writing designed to match your brand tone and support engagement."
+  },
+  {
+    "id": 5,
+    "title": "Brand Messaging Support",
+    "category": "Branding",
+    "price": "$85",
+    "description": "Help refining how your business communicates online.",
+    "details": "Includes brand voice review, messaging direction, and clearer customer-facing communication."
+  },
+  {
+    "id": 6,
+    "title": "Visual Content Review",
+    "category": "Branding",
+    "price": "$60",
+    "description": "Feedback on how your photos and visual content represent your brand.",
+    "details": "Focuses on consistency, professionalism, visual presentation, and stronger brand alignment."
+  },
+  {
+    "id": 7,
+    "title": "Short-Form Content Ideas",
+    "category": "Content",
+    "price": "$55",
+    "description": "Creative ideas for reels, short videos, or quick branded content.",
+    "details": "Includes practical ideas for short-form content that can be created without overcomplicating production."
+  },
+  {
+    "id": 8,
+    "title": "Business Profile Optimization",
+    "category": "Strategy",
+    "price": "$50",
+    "description": "Improvement suggestions for your social media business profiles.",
+    "details": "Includes bio review, profile image guidance, link setup, and stronger first impressions."
+  },
+  {
+    "id": 9,
+    "title": "Brand Photo Planning",
+    "category": "Branding",
+    "price": "$95",
+    "description": "Planning support for branded photos that match your business goals.",
+    "details": "Includes shot ideas, visual direction, and guidance for how to use photos across platforms."
+  },
+  {
+    "id": 10,
+    "title": "Post Design Guidance",
+    "category": "Content",
+    "price": "$65",
+    "description": "Support for designing cleaner and more professional social posts.",
+    "details": "Focuses on layout, readability, consistency, and stronger branded presentation."
+  },
+  {
+    "id": 11,
+    "title": "Content Repurposing Ideas",
+    "category": "Content",
+    "price": "$45",
+    "description": "Suggestions for turning one piece of content into multiple posts.",
+    "details": "Helps save time by showing how one idea can become several useful content pieces."
+  },
+  {
+    "id": 12,
+    "title": "Monthly Content Support",
+    "category": "Strategy",
+    "price": "$150",
+    "description": "Ongoing support to help maintain a more consistent online presence.",
+    "details": "Includes planning support, topic ideas, and monthly direction for your content."
+  },
+  {
+    "id": 13,
+    "title": "Service Promotion Plan",
+    "category": "Strategy",
+    "price": "$80",
+    "description": "A simple plan for promoting your services more clearly online.",
+    "details": "Focuses on clearer offers, stronger visibility, and better communication of value."
+  },
+  {
+    "id": 14,
+    "title": "Mini Brand Refresh Review",
+    "category": "Branding",
+    "price": "$70",
+    "description": "A review of small changes that could improve your business image.",
+    "details": "Includes recommendations for consistency, visual polish, and stronger brand presentation."
+  },
+  {
+    "id": 15,
+    "title": "Custom Marketing Support",
+    "category": "Strategy",
+    "price": "$100",
+    "description": "Flexible support based on your business needs and current challenges.",
+    "details": "A tailored option for businesses that need practical marketing help without a full agency package."
+  }
+]

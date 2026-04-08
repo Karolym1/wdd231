@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You | BSCPhotoPro</title>
+
+    <link rel="stylesheet" href="styles/base.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <h1>BSCPhotoPro</h1>
+    </header>
+
+    <main class="card">
+      <h2>Thank You!</h2>
+      <p>Your inquiry has been received.</p>
+
+      <div id="results"></div>
+    </main>
+
+    <footer>
+      <p>© 2026 BSCPhotoPro</p>
+    </footer>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      document.getElementById("results").innerHTML = `
+<p><strong>Name:</strong> ${params.get("fullname")}</p>
+<p><strong>Email:</strong> ${params.get("email")}</p>
+`;
+    </script>
+  </body>
+</html>
