@@ -6,12 +6,12 @@
     <title>BSCPhotoPro | Services</title>
     <meta
       name="description"
-      content="Explore marketing and content services."
+      content="Explore marketing, branding, and content services for small businesses."
     />
 
     <link rel="stylesheet" href="styles/base.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -40,56 +40,55 @@
     </header>
 
     <main>
-      <section class="card">
-        <h2>Services That Help Your Business Show Up Better Online</h2>
+      <section class="hero">
+        <p class="eyebrow">Services</p>
+        <h2>Support built for real business needs</h2>
         <p>
-          Browse service options for strategy, branding, and content support.
+          Choose the level of support that fits your business — from quick
+          improvements to ongoing marketing help.
         </p>
       </section>
 
       <section class="card">
-        <h2>Filter Services</h2>
+        <div class="section-heading">
+          <p class="eyebrow">Filter</p>
+          <h2>Browse by category</h2>
+        </div>
+
         <div class="filter-buttons">
-          <button>All</button>
-          <button>Strategy</button>
-          <button>Content</button>
-          <button>Branding</button>
+          <button class="filter-btn" data-category="all">All</button>
+          <button class="filter-btn" data-category="strategy">Strategy</button>
+          <button class="filter-btn" data-category="content">Content</button>
+          <button class="filter-btn" data-category="branding">Branding</button>
         </div>
       </section>
 
       <section class="card">
-        <h2>Available Services</h2>
-
-        <div class="services-grid">
-          <div class="card">
-            <h3>Social Media Audit</h3>
-            <p>Category: Strategy</p>
-            <p>Price: $75</p>
-            <p>A review of your current presence.</p>
-            <button>Learn More</button>
-          </div>
-
-          <div class="card">
-            <h3>Content Planning Session</h3>
-            <p>Category: Strategy</p>
-            <p>Price: $90</p>
-            <p>Planning focused on content direction.</p>
-            <button>Learn More</button>
-          </div>
-
-          <div class="card">
-            <h3>30-Day Content Calendar</h3>
-            <p>Category: Content</p>
-            <p>Price: $120</p>
-            <p>Full month of organized content ideas.</p>
-            <button>Learn More</button>
-          </div>
+        <div class="section-heading">
+          <p class="eyebrow">Services</p>
+          <h2>Available options</h2>
         </div>
+
+        <div id="services-container" class="services-grid"></div>
+      </section>
+
+      <section class="cta-panel">
+        <p class="eyebrow">Next step</p>
+        <h2>Not sure what you need?</h2>
+        <p>
+          Send a quick inquiry and get direction on what type of support would
+          help your business most.
+        </p>
+        <a href="contact.html" class="btn">Contact Us</a>
       </section>
     </main>
 
     <footer>
-      <p>© 2026 BSCPhotoPro</p>
+      <p>&copy; 2026 BSCPhotoPro</p>
+      <p id="visits"></p>
     </footer>
+
+    <script src="scripts/services.js"></script>
+    <script src="scripts/visit.js"></script>
   </body>
 </html>

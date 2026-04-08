@@ -1,80 +1,59 @@
-const servicesContainer = document.querySelector("#services-container");
+const container = document.querySelector("#services-container");
 const filterButtons = document.querySelectorAll(".filter-btn");
-const modal = document.querySelector("#service-modal");
-const modalContent = document.querySelector("#modal-content");
-const closeModalButton = document.querySelector("#close-modal");
 
 let services = [];
 
 async function getServices() {
   try {
-    const response = await fetch("data/services.json");
+    const response = await fetch("./data/services.json");
 
     if (!response.ok) {
-      throw new Error("Could not load services data.");
+      throw new Error("Failed to load services data");
     }
 
     services = await response.json();
-
-    const savedCategory = localStorage.getItem("selectedCategory") || "All";
-    displayServices(savedCategory);
-    highlightActiveButton(savedCategory);
+    displayServices(services);
   } catch (error) {
-    servicesContainer.innerHTML = `<p>${error.message}</p>`;
+    container.innerHTML = `<p>Error loading services.</p>`;
+    console.error(error);
   }
 }
 
-function displayServices(category) {
-  const filteredServices =
-    category === "All"
-      ? services
-      : services.filter((service) => service.category === category);
+function displayServices(serviceList) {
+  container.innerHTML = "";
 
-  servicesContainer.innerHTML = filteredServices
-    .map(
-      (service) => `
-        <article class="service-card">
-          <h3>${service.title}</h3>
-          <p><strong>Category:</strong> ${service.category}</p>
-          <p><strong>Price:</strong> ${service.price}</p>
-          <p>${service.description}</p>
-          <button class="details-btn" data-id="${service.id}">Learn More</button>
-        </article>
-      `,
-    )
-    .join("");
+  serviceList.forEach((service) => {
+    const card = document.createElement("article");
+    card.classList.add("service-card");
+    card.dataset.category = service.category.toLowerCase();
 
-  const detailButtons = document.querySelectorAll(".details-btn");
+    card.innerHTML = `
+      <h3>${service.title}</h3>
+      <p><strong>Category:</strong> ${service.category}</p>
+      <p><strong>Price:</strong> ${service.price}</p>
+      <p>${service.description}</p>
+      <button class="details-btn" type="button">Learn More</button>
+    `;
 
-  detailButtons.forEach((button) => {
+    const button = card.querySelector(".details-btn");
     button.addEventListener("click", () => {
-      const serviceId = Number(button.dataset.id);
-      const selectedService = services.find(
-        (service) => service.id === serviceId,
-      );
-      showModal(selectedService);
+      alert(service.details);
     });
+
+    container.appendChild(card);
   });
 }
 
-function showModal(service) {
-  modalContent.innerHTML = `
-    <h3>${service.title}</h3>
-    <p><strong>Category:</strong> ${service.category}</p>
-    <p><strong>Price:</strong> ${service.price}</p>
-    <p><strong>Description:</strong> ${service.description}</p>
-    <p><strong>Details:</strong> ${service.details}</p>
-  `;
+function filterServices(category) {
+  const cards = document.querySelectorAll(".service-card");
 
-  modal.showModal();
-}
+  cards.forEach((card) => {
+    const cardCategory = card.dataset.category;
 
-function highlightActiveButton(category) {
-  filterButtons.forEach((button) => {
-    if (button.dataset.category === category) {
-      button.classList.add("active-filter");
+    if (category === "all" || cardCategory === category) {
+      card.style.display = "block";
     } else {
-      button.classList.remove("active-filter");
+      card.style.display = "none";
     }
   });
 }
@@ -82,14 +61,8 @@ function highlightActiveButton(category) {
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const category = button.dataset.category;
-    localStorage.setItem("selectedCategory", category);
-    displayServices(category);
-    highlightActiveButton(category);
+    filterServices(category);
   });
-});
-
-closeModalButton.addEventListener("click", () => {
-  modal.close();
 });
 
 getServices();
