@@ -29,15 +29,18 @@ function displayServices(serviceList) {
 
     card.innerHTML = `
       <h3>${service.title}</h3>
-      <p><strong>Category:</strong> ${service.category}</p>
-      <p><strong>Price:</strong> ${service.price}</p>
+      <p class="category">${service.category}</p>
+      <p class="price">${service.price}</p>
       <p>${service.description}</p>
-      <button class="details-btn" type="button">Learn More</button>
+      <div class="card-actions">
+        <button class="details-btn" type="button">Learn More</button>
+        <a href="contact.html" class="contact-btn">Contact</a>
+      </div>
     `;
 
     const button = card.querySelector(".details-btn");
     button.addEventListener("click", () => {
-      alert(service.details);
+      showModal(service.title, service.details);
     });
 
     container.appendChild(card);
@@ -61,8 +64,37 @@ function filterServices(category) {
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const category = button.dataset.category;
+
+    filterButtons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
+
     filterServices(category);
   });
 });
+
+function showModal(title, details) {
+  const modal = document.createElement("div");
+  modal.classList.add("modal");
+
+  modal.innerHTML = `
+    <div class="modal-content">
+      <h3>${title}</h3>
+      <p>${details}</p>
+      <button class="close-modal" type="button">Close</button>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  modal.querySelector(".close-modal").addEventListener("click", () => {
+    modal.remove();
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.remove();
+    }
+  });
+}
 
 getServices();
